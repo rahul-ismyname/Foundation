@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Foundation Coaching Institute</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            height: 150px;
+        }
+
+        @media(max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Foundation Coaching Institute Logo">
+                <div class="logo-text">
+                    <h1>Foundation</h1>
+                    <span>Coaching Institute</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero"
+        style="height: 300px; background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/hero.png');">
+        <div class="hero-content">
+            <h2>Contact Us</h2>
+            <p>We'd Love to Hear From You</p>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container contact-grid">
+            <div class="contact-details">
+                <h3 style="color: var(--primary-color); margin-bottom: 20px;">Get in Touch</h3>
+                <p style="margin-bottom: 30px;">Have questions about our courses or fee structure? Reach out to us!</p>
+
+                <div class="feature-card"
+                    style="text-align: left; padding: 20px; display: flex; gap: 20px; align-items: center; margin-bottom: 20px;">
+                    <i class="fas fa-map-marker-alt" style="font-size: 1.5rem; color: var(--secondary-color);"></i>
+                    <div>
+                        <strong>Address:</strong>
+                        <p>Near Old Post Office, Damodarpur, Muzaffarpur, Bihar</p>
+                    </div>
+                </div>
+
+                <div class="feature-card"
+                    style="text-align: left; padding: 20px; display: flex; gap: 20px; align-items: center; margin-bottom: 20px;">
+                    <i class="fas fa-phone" style="font-size: 1.5rem; color: var(--secondary-color);"></i>
+                    <div>
+                        <strong>Phone:</strong>
+                        <p>+91 99999 99999</p>
+                    </div>
+                </div>
+
+                <div class="feature-card"
+                    style="text-align: left; padding: 20px; display: flex; gap: 20px; align-items: center;">
+                    <i class="fas fa-envelope" style="font-size: 1.5rem; color: var(--secondary-color);"></i>
+                    <div>
+                        <strong>Email:</strong>
+                        <p>foundationcoachinginstitutemuz@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3 style="color: var(--primary-color); margin-bottom: 20px;">Send a Message</h3>
+                <form>
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="+91">
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea placeholder="How can we help you?"></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="border: none; cursor: pointer;">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Placeholder -->
+    <div
+        style="width: 100%; height: 400px; background: #eee; display: flex; align-items: center; justify-content: center; color: #777;">
+        <p>Google Map Embed Will Go Here</p>
+    </div>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>About Us</h3>
+                <p>Foundation Coaching Institute is committed to providing quality education and moral guidance to
+                    students of Muzaffarpur.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <ul class="contact-info">
+                    <li><i class="fas fa-map-marker-alt"></i> Near Old Post Office, Damodarpur, Muzaffarpur, Bihar</li>
+                    <li><i class="fas fa-phone"></i> +91 99999 99999</li>
+                    <li><i class="fas fa-envelope"></i> foundationcoachinginstitutemuz@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Foundation Coaching Institute. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
