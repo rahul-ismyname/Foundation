@@ -1,8 +1,11 @@
 /* Global Styles */
 :root {
-    --primary-color: #2E7D32; /* Forest Green */
-    --secondary-color: #4CAF50; /* Light Green */
-    --accent-color: #FFC107; /* Amber/Yellow for highlights */
+    --primary-color: #2E7D32;
+    /* Forest Green */
+    --secondary-color: #4CAF50;
+    /* Light Green */
+    --accent-color: #FFC107;
+    /* Amber/Yellow for highlights */
     --text-dark: #333333;
     --text-light: #666666;
     --white: #ffffff;
@@ -42,7 +45,7 @@ ul {
 /* Header & Navigation */
 header {
     background-color: var(--white);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -103,7 +106,8 @@ nav a {
     padding-bottom: 5px;
 }
 
-nav a:hover, nav a.active {
+nav a:hover,
+nav a.active {
     color: var(--primary-color);
 }
 
@@ -118,7 +122,8 @@ nav a::after {
     transition: width 0.3s;
 }
 
-nav a:hover::after, nav a.active::after {
+nav a:hover::after,
+nav a.active::after {
     width: 100%;
 }
 
@@ -126,7 +131,7 @@ nav a:hover::after, nav a.active::after {
 .hero {
     position: relative;
     height: 600px;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/hero.png');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=2070');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -139,7 +144,7 @@ nav a:hover::after, nav a.active::after {
 .hero-content h2 {
     font-size: 3rem;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
@@ -213,7 +218,7 @@ nav a:hover::after, nav a.active::after {
     background: var(--white);
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     text-align: center;
     transition: transform 0.3s;
 }
@@ -238,7 +243,7 @@ nav a:hover::after, nav a.active::after {
     background: var(--white);
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-top: 5px solid var(--secondary-color);
 }
 
@@ -322,20 +327,108 @@ footer {
     font-size: 0.9em;
 }
 
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+.hidden {
+    display: none;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-    .nav-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    nav ul {
-        flex-direction: column;
-        text-align: center;
-        gap: 15px;
+    .top-bar .social-small {
+        display: none;
     }
 
-    .hero h2 {
+    .top-bar .container {
+        justify-content: center;
+    }
+
+    .nav-container {
+        padding: 10px 0;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .logo-text h1 {
+        font-size: 1.2rem;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        gap: 20px;
+        z-index: 1000;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav a::after {
+        display: none;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero-content h2 {
         font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .section-title h2 {
+        font-size: 2rem;
+    }
+
+    .btn-secondary {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text span {
+        display: none;
+    }
+
+    .hero {
+        height: 350px;
+    }
+
+    .contact-small {
+        font-size: 0.8rem;
     }
 }
